@@ -7,7 +7,7 @@
 		"author" : "Jeremy Greze",
 		"icon" : "icon-list-alt",
 		"licenseInfo" : "Apache Software License version 2",
-		"url" : "https://www.dataiku.com/community/plugins/googlesheets",
+		"url" : "https://github.com/jereze/dataiku-dss-plugin-ovh-logs",
 		"tags" : ["logs", "website", "ovh"]
 	}
 }
