@@ -1,0 +1,13 @@
+{
+	"id" : "ovhlogs",
+	"version" : "0.0.1",
+	"meta" : {
+		"label" : "OVH logs importer",
+		"description" : "Get the logs of your website hosted by OVH shared hosting",
+		"author" : "Jeremy Greze",
+		"icon" : "icon-list-alt",
+		"licenseInfo" : "Apache Software License version 2",
+		"url" : "https://www.dataiku.com/community/plugins/googlesheets",
+		"tags" : ["logs", "website", "ovh"]
+	}
+}

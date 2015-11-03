@@ -1,0 +1,43 @@
+{
+    "meta" : {
+        "label" : "OVH logs",
+        "description" : "Get the logs of your website hosted by OVH shared hosting",
+        "tags" : ["logs", "website", "ovh"]
+    },
+    "strictSchema" : false,
+    "readable" : true,
+    "writable" : false,
+    "partitioningMode" : "NON_PARTITIONABLE",
+    "params": [
+        {
+            "name": "login",
+            "label": "Login",
+            "type": "STRING",
+            "mandatory" : true
+        },
+        {
+            "name": "password",
+            "label": "Password",
+            "type": "PASSWORD",
+            "mandatory" : true
+        },
+        {
+            "name": "domain",
+            "label": "Domain name, without 'www' (example: foo.com)",
+            "type": "STRING",
+            "mandatory" : true
+        },
+        {
+            "name": "from_date",
+            "label": "Starting date (YYYY-MM-DD format)",
+            "type": "STRING",
+            "mandatory" : true
+        },
+        {
+            "name": "to_date",
+            "label": "End date (YYYY-MM-DD format)",
+            "type": "STRING",
+            "mandatory" : true
+        }
+    ]
+}
