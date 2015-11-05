@@ -38,13 +38,26 @@ class MyConnector(Connector):
         The dataset schema and partitioning are given for information purpose.
         """
 
+        print "OVH logs plugin - Start generating rows"
+        print "OVH logs plugin - records_limits=%i" % records_limit
+
         from_date = datetime.datetime.strptime(self.from_date, "%Y-%m-%d")
         to_date = datetime.datetime.strptime(self.to_date, "%Y-%m-%d")
 
         if to_date < from_date:
             raise ValueError("The end date occurs before the start date")
 
+        # Test request
+        r = requests.get('https://logs.ovh.net/'+str(self.domain)+'/', auth = (self.login, self.password))
+        if r.status_code == 404:
+            raise ValueError('Could not get logs for this domain.')
+        elif r.status_code == 401:
+            raise ValueError('Authentication error. Check the login and the password.')
+        elif r.status_code >= 300:
+            raise ValueError('Unknown error with test request.')
+
         list_datetimes = [from_date + datetime.timedelta(days=x) for x in range((to_date-from_date).days + 1)]
+        print "OVH logs plugin - List of dates: %s" % ", ".join([d.strftime("%d/%m/%Y") for d in list_datetimes])
 
         parts = [
             r'(?P<host>\S+)',                   # host %h
@@ -70,8 +83,6 @@ class MyConnector(Connector):
                     res = m.groupdict()
                     yield res
 
-            elif r.status_code == 401:
-                raise ValueError('Error when authenticating. Check the login and the password.')
             else:
                 raise ValueError('Error when getting %s' % d.strftime("%d/%m/%Y"))
 
