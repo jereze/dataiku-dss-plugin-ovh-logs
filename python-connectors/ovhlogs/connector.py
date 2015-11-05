@@ -73,19 +73,23 @@ class MyConnector(Connector):
         pattern = re.compile(r'\s+'.join(parts)+r'\s*\Z')
 
         for d in list_datetimes:
-            print "OVH logs plugin - Working on %s" % d.strftime("%d/%m/%Y")
+            print "OVH logs plugin - %s" % d.strftime("%d/%m/%Y")
             r = requests.get('https://logs.ovh.net/'+str(self.domain)+'/logs-'+str(d.strftime("%m-%Y"))+'/'+str(self.domain)+'-'+str(d.strftime("%d-%m-%Y"))+'.log.gz', auth = (self.login, self.password))
-            print "OVH logs plugin - Getting %s" % r.url
-            print "OVH logs plugin - Status code: %i" % r.status_code
+            print "OVH logs plugin - %s - Getting %s" % (d.strftime("%d/%m/%Y"), r.url)
+            print "OVH logs plugin - %s - Status code: %i" % (d.strftime("%d/%m/%Y"), r.status_code)
             if r.status_code == 200:
                 for row in r.text.splitlines():
                     m = pattern.match(row)
-                    res = m.groupdict()
-                    yield res
+                    if m == None:
+                        print "OVH logs plugin - %s - No matching for: %s" % (d.strftime("%d/%m/%Y"), row)
+                    else:
+                        res = m.groupdict()
+                        yield res
 
             else:
                 raise ValueError('Error when getting %s' % d.strftime("%d/%m/%Y"))
 
+        print "OVH logs plugin - End generating rows"
 
 
     def get_writer(self, dataset_schema=None, dataset_partitioning=None,
