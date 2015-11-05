@@ -7,9 +7,25 @@ Read OVH documentation to get access to your logs:
 * English: https://www.ovh.co.uk/g1344.statistiques-logs
 * French: https://www.ovh.com/fr/g1344.statistiques-et-logs
 
-# How to set-up
+## How to set-up
 
 * Install python dependencies with the [pip of the DSS virtualenv](http://learn.dataiku.com/howto/code/python/install-python-packages.html): `data_dir/bin/pip install --upgrade requests`
 * Install the plugin in DSS.
 * Create a new dataset with this connector. Fill the parameters and click on the “Test“ button. Then, save and explore.
 
+## Logs
+
+To debug:
+
+`tail -fn 100 data_dir/run/backend.log | egrep 'OVH logs plugin'`
+
+## Changelog
+
+**Version 0.0.2 (2015-11-05)**
+
+* Test request to check the connection
+* More logs for better debugging
+
+**Version 0.0.1 (2015-11-03)**
+
+* Initial release

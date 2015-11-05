@@ -1,6 +1,6 @@
 {
 	"id" : "ovhlogs",
-	"version" : "0.0.1",
+	"version" : "0.0.2",
 	"meta" : {
 		"label" : "OVH logs importer",
 		"description" : "Get the logs of your website hosted by OVH shared hosting",
