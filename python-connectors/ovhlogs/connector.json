@@ -1,13 +1,12 @@
 {
     "meta" : {
         "label" : "OVH logs",
-        "description" : "Get the logs of your website hosted by OVH shared hosting",
-        "tags" : ["logs", "website", "ovh"]
+        "description" : "Get the logs of your website hosted by OVH shared hosting"
     },
-    "strictSchema" : false,
+
     "readable" : true,
     "writable" : false,
-    "partitioningMode" : "NON_PARTITIONABLE",
+
     "params": [
         {
             "name": "login",
