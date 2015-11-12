@@ -10,7 +10,7 @@ Read OVH documentation to get access to your logs:
 ## How to set-up
 
 * Install python dependencies with the [pip of the DSS virtualenv](http://learn.dataiku.com/howto/code/python/install-python-packages.html): `data_dir/bin/pip install --upgrade requests`
-* Download the zip ([dss-plugin-ovh-logs-0.0.2.zip](https://github.com/jereze/dataiku-dss-plugin-ovh-logs/releases/download/v0.0.2/dss-plugin-ovh-logs-0.0.2.zip)) and install the plugin in DSS.
+* Download the zip ([dss-plugin-ovh-logs-0.0.3.zip](https://github.com/jereze/dataiku-dss-plugin-ovh-logs/releases/download/v0.0.3/dss-plugin-ovh-logs-0.0.3.zip)) and install the plugin in DSS.
 * Create a new dataset with this connector. Fill the parameters and click on the “Test” button. Then, save and explore.
 
 ## Logs
