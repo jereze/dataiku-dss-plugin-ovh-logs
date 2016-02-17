@@ -1,5 +1,5 @@
 {
-	"id" : "ovhlogs",
+	"id" : "ovh-logs-import",
 	"version" : "0.0.3",
 	"meta" : {
 		"label" : "OVH logs importer",
