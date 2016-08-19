@@ -1,6 +1,8 @@
 # OVH logs importer
 
-This plugin helps you to import in [Dataiku Data Science Studio](http://www.dataiku.com/dss/) the logs of your website hosted by [OVH shared hosting](http://www.ovh.com).
+This plugin helps you to import in [Dataiku DSS](http://www.dataiku.com/dss/) the logs of your website hosted by [OVH shared hosting](http://www.ovh.com).
+
+Read more on the plugin page on Dataiku website: https://www.dataiku.com/dss/plugins/info/ovh-logs-import.html
 
 Read OVH documentation to get access to your logs:
 
