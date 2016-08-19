@@ -11,7 +11,7 @@ Read OVH documentation to get access to your logs:
 
 ## How to set-up
 
-* Browse to the Plugins Marketplace in DSS administration tab and install the plugin in DSS. Or, you can download the zip ([dss-plugin-ovh-logs-import-0.0.3.zip](https://github.com/jereze/dataiku-dss-plugin-ovh-logs/releases/download/v0.0.3/dss-plugin-ovh-logs-import-0.0.3.zip)) and upload it in DSS adminitration tab.
+* Browse to the Plugins Marketplace in DSS administration tab and install the plugin in DSS. Or, you can download the zip ([dss-plugin-ovh-logs-import-0.0.4.zip](https://github.com/jereze/dataiku-dss-plugin-ovh-logs/releases/download/v0.0.4/dss-plugin-ovh-logs-import-0.0.4.zip)) and upload it in DSS adminitration tab.
 * Create a new dataset with this connector. Fill the parameters and click on the “Test” button. Then, save and explore.
 
 ## Logs
@@ -21,6 +21,10 @@ To debug:
 `tail -fn 100 data_dir/run/backend.log | egrep 'OVH logs plugin'`
 
 ## Changelog
+
+**Version 0.0.4 (2016-08-19)**
+
+* Enhancement: use a unique connection to get logs
 
 **Version 0.0.3 (2015-11-12)**
 
