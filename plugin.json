@@ -1,6 +1,6 @@
 {
 	"id" : "ovh-logs-import",
-	"version" : "0.0.4",
+	"version" : "0.0.5",
 	"meta" : {
 		"label" : "OVH logs importer",
 		"description" : "Get the logs of your website hosted by OVH shared hosting",
@@ -8,6 +8,6 @@
 		"icon" : "icon-list-alt",
 		"licenseInfo" : "Apache Software License version 2",
 		"url" : "https://github.com/jereze/dataiku-dss-plugin-ovh-logs",
-		"tags" : ["logs", "website", "ovh"]
+		"tags" : ["logs", "website"]
 	}
 }

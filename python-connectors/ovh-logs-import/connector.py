@@ -79,7 +79,7 @@ class MyConnector(Connector):
 
         for d in list_datetimes:
             print "OVH logs plugin - %s" % d.strftime("%d/%m/%Y")
-            url = 'https://logs.ovh.net/'+str(self.domain)+'/logs-'+str(d.strftime("%m-%Y"))+'/'+str(self.domain)+'-'+str(d.strftime("%d-%m-%Y"))+'.log.gz'
+            url = 'https://logs.ovh.net/'+str(self.domain)+'/logs/logs-'+str(d.strftime("%m-%Y"))+'/'+str(self.domain)+'-'+str(d.strftime("%d-%m-%Y"))+'.log.gz'
             print "OVH logs plugin - %s - Getting %s" % (d.strftime("%d/%m/%Y"), url)
             r = s.get(url, auth = (self.login, self.password))
             print "OVH logs plugin - %s - Status code: %i" % (d.strftime("%d/%m/%Y"), r.status_code)

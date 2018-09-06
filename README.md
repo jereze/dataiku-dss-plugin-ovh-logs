@@ -6,8 +6,8 @@ Read more on the plugin page on Dataiku website: https://www.dataiku.com/dss/plu
 
 Read OVH documentation to get access to your logs:
 
-* English: https://www.ovh.co.uk/g1344.statistiques-logs
-* French: https://www.ovh.com/fr/g1344.statistiques-et-logs
+* English: https://docs.ovh.com/gb/en/hosting/shared_view_my_websites_logs_and_statistics/
+* French: https://docs.ovh.com/fr/hosting/mutualise-consulter-les-statistiques-et-les-logs-de-mon-site/
 
 ## How to set-up
 
@@ -21,6 +21,10 @@ To debug:
 `tail -fn 100 data_dir/run/backend.log | egrep 'OVH logs plugin'`
 
 ## Changelog
+
+**Version 0.0.5 (2018-09-06)**
+
+* Fix: OVH changed the backend URL, the plugin was updated
 
 **Version 0.0.4 (2016-08-19)**
 
